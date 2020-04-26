@@ -1,0 +1,32 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="+?TXLIYxuqbTCm~d+XWD">mySprite</variable><variable type="KIND_SpriteKind" id="q^V}Iz4LYl*Jz,K42#3Y">Player</variable><variable type="KIND_SpriteKind" id="(8mqd5Yt1fo9Tf(Ki@Af">Projectile</variable><variable type="KIND_SpriteKind" id="d]dqcc.,OERi3Oi8VEk5">Food</variable><variable type="KIND_SpriteKind" id="k{E8Z=]UzH+17@DW+ghz">Enemy</variable><variable type="BLOCKLY_TILESET_TYPE" id="b;]ka=%$SIRY3C*I5WOD">0;16;16;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</variable></variables><block type="pxt-on-start" x="0" y="0"><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="+?TXLIYxuqbTCm~d+XWD">mySprite</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . c c f f f . . . . . . . . . . . . . . 
+. . . . . . . . . . . c c d d b c f . . . . . . . . . . . . . . 
+. . . . . . . . . . c c d d b b f . . . . . . . . . . . . . . . 
+. . . . . . . . . . f c c b b c f . . . . . . . . . . . . . . . 
+. . . . . f f f f f c c c c c c f f . . . . . . . . . c c c . . 
+. . . f f b b b b b b b c b b b b c f f f . . . . c c b b c . . 
+. . f b b b b b b b b c b c b b b b c c c f f . c d b b c . . . 
+f f b b b b b b f f b b c b c b b b c c c c c f c d b b f . . . 
+f b c b b b 1 1 f f 1 b c b b b b b c c c c c f f b b f . . . . 
+f b b b 1 1 1 1 1 1 1 1 b b b b b c c c c c c c b b c f . . . . 
+. f b 1 1 1 3 3 c c 1 1 b b b b c c c c c c c c c c c f . . . . 
+. . f c c c 3 1 c 1 1 1 b b b c c c c c b d b f f b b c f . . . 
+. . . f c 1 3 c 1 1 1 c b b b f c d d d d c c . . f b b f . . . 
+. . . . f c c c 1 1 1 f b d b b c c d c c . . . . . f b b f . . 
+. . . . . . . . c c c c f c d b b c c . . . . . . . . f f f . . 
+. . . . . . . . . . . . . f f f f f . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><shadow type="variables_get"><field name="VAR" id="+?TXLIYxuqbTCm~d+XWD">mySprite</field></shadow></value><value name="vx"><shadow type="math_number"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number"><field name="NUM">100</field></shadow></value><next><block type="Sprite_blockCombine_change"><field name="property">Sprite.x@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="+?TXLIYxuqbTCm~d+XWD">mySprite</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">1</field></shadow></value><next><block type="camerafollow"><value name="sprite"><block type="variables_get"><field name="VAR" id="+?TXLIYxuqbTCm~d+XWD">mySprite</field></block></value><next><block type="gamesetbackgroundcolor"><value name="color"><shadow type="colorindexpicker"><field name="index">9</field></shadow></value><next><block type="tilemap_editor"><field name="tilemap">tiles.createTilemap(
+            hex`1400080000000000000000000000000000000000000000070b0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c0c080e0000000000000000000000000000000000080e1000000000000000000000000000000000080e1018000000000000000000000000000000080e1018180000010103070707080808080909090e1018181600001211111111111111111111111110181516000000131010101010101010101010101816000000`,
+            img`
+. . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . 
+`,
+            [myTiles.tile0,sprites.builtin.coral0,sprites.builtin.oceanDepths0,sprites.builtin.coral2,sprites.builtin.oceanDepths1,sprites.builtin.oceanDepths2,sprites.builtin.oceanDepths4,sprites.builtin.coral3,sprites.builtin.coral5,sprites.builtin.coral4,sprites.builtin.oceanSand0,sprites.builtin.oceanDepths10,sprites.builtin.oceanDepths11,sprites.builtin.oceanDepths8,sprites.builtin.oceanSand2,sprites.builtin.oceanSand3,sprites.builtin.oceanSand9,sprites.builtin.oceanSand6,sprites.builtin.oceanSand1,sprites.builtin.oceanSand13,sprites.builtin.oceanSand12,sprites.builtin.oceanSand14,sprites.builtin.oceanSand15,sprites.builtin.oceanSand8,sprites.builtin.oceanSand11,sprites.builtin.oceanSand7],
+            TileScale.Sixteen
+        )</field></block></next></block></next></block></next></block></next></block></next></block></statement></block></xml>
